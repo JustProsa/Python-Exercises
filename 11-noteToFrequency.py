@@ -14,5 +14,29 @@
 
 # Hint: You will want to access the characters in the note entered by the user individually when completing this exercise. Begin by separating the letter from the octave. Then compute the frequency for that letter in the fourth octave using the data in the table above. Once you have this frequency you should divide it by 24−x , where x is the octave number entered by the user. This will halve or double the frequency the correct number of times.
 
-prova = [[3, 4, 5, 6], [3, 4, 5, 6]]
-print(prova)
+print("\nNotes and Frequency")
+print("C4 = 261.63 (Hz)")
+print("D4 = 293.66 (Hz)")
+print("E4 = 329.63 (Hz)")
+print("F4 = 349.23 (Hz)")
+print("G4 = 392.00 (Hz)")
+print("A4 = 440.00 (Hz)")
+print("B4 = 493.00 (Hz)")
+
+print("\nEnter the note")
+note = input()
+
+if note == "C4":
+    print("The frequency of " + note + " is 261.63 Hz.")
+elif note == "D4":
+    print("The frequency of " + note + " is 293.66 Hz.")
+elif note == "E4":
+    print("The frequency of " + note + " is 329.63 Hz.")
+elif note == "F4":
+    print("The frequency of " + note + " is 349.23 Hz.")
+elif note == "G4":
+    print("The frequency of " + note + " is 392.00 Hz.")
+elif note == "A4":
+    print("The frequency of " + note + " is 440.00 Hz.")
+elif note == "B4":
+    print("The frequency of " + note + " is 493.00 Hz.")
