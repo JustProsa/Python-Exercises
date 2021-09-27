@@ -14,6 +14,9 @@
 
 # Hint: You will want to access the characters in the note entered by the user individually when completing this exercise. Begin by separating the letter from the octave. Then compute the frequency for that letter in the fourth octave using the data in the table above. Once you have this frequency you should divide it by 24−x , where x is the octave number entered by the user. This will halve or double the frequency the correct number of times.
 
+# Formula frequenze: f = k ** n * f0
+
+
 print("\nNotes and Frequency")
 print("C4 = 261.63 (Hz)")
 print("D4 = 293.66 (Hz)")
@@ -23,20 +26,53 @@ print("G4 = 392.00 (Hz)")
 print("A4 = 440.00 (Hz)")
 print("B4 = 493.00 (Hz)")
 
+
 print("\nEnter the note")
 note = input()
 
-if note == "C4":
-    print("The frequency of " + note + " is 261.63 Hz.")
-elif note == "D4":
-    print("The frequency of " + note + " is 293.66 Hz.")
-elif note == "E4":
-    print("The frequency of " + note + " is 329.63 Hz.")
-elif note == "F4":
-    print("The frequency of " + note + " is 349.23 Hz.")
-elif note == "G4":
-    print("The frequency of " + note + " is 392.00 Hz.")
-elif note == "A4":
-    print("The frequency of " + note + " is 440.00 Hz.")
-elif note == "B4":
-    print("The frequency of " + note + " is 493.00 Hz.")
+c_frequency_4 = 261.63
+d_frequency_4 = 293.66
+e_frequency_4 = 329.63
+f_frequency_4 = 349.23
+g_frequency_4 = 392.00
+a_frequency_4 = 440.00
+b_frequency_4 = 493.00
+
+if note[0] == "C" and int(note[1]) < 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** -((4 - int(note[1])) * 12) * c_frequency_4)), ".2f")) + " Hz.")
+elif note[0] == "C" and int(note[1]) >= 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** ((int(note[1]) - 4) * 12) * c_frequency_4)), ".2f")) + " Hz.")
+
+if note[0] == "D" and int(note[1]) < 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** -((4 - int(note[1])) * 12) * d_frequency_4)), ".2f")) + " Hz.")
+elif note[0] == "D" and int(note[1]) >= 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** ((int(note[1]) - 4) * 12) * d_frequency_4)), ".2f")) + " Hz.")
+
+if note[0] == "E" and int(note[1]) < 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** -((4 - int(note[1])) * 12) * e_frequency_4)), ".2f")) + " Hz.")
+elif note[0] == "E" and int(note[1]) >= 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** ((int(note[1]) - 4) * 12) * e_frequency_4)), ".2f")) + " Hz.")
+
+if note[0] == "F" and int(note[1]) < 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** -((4 - int(note[1])) * 12) * f_frequency_4)), ".2f")) + " Hz.")
+elif note[0] == "F" and int(note[1]) >= 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** ((int(note[1]) - 4) * 12) * f_frequency_4)), ".2f")) + " Hz.")
+
+if note[0] == "G" and int(note[1]) < 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** -((4 - int(note[1])) * 12) * g_frequency_4)), ".2f")) + " Hz.")
+elif note[0] == "G" and int(note[1]) >= 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** ((int(note[1]) - 4) * 12) * g_frequency_4)), ".2f")) + " Hz.")
+
+if note[0] == "A" and int(note[1]) < 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** -((4 - int(note[1])) * 12) * a_frequency_4)), ".2f")) + " Hz.")
+elif note[0] == "A" and int(note[1]) >= 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** ((int(note[1]) - 4) * 12) * a_frequency_4)), ".2f")) + " Hz.")
+
+if note[0] == "B" and int(note[1]) < 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** -((4 - int(note[1])) * 12) * c_frequency_4)), ".2f")) + " Hz.")
+elif note[0] == "B" and int(note[1]) >= 4:
+    print("The frequency of " + note + " is " + str(format((((2 ** (1/12)) ** ((int(note[1]) - 4) * 12) * c_frequency_4)), ".2f")) + " Hz.")
+
+
+
+
