@@ -22,7 +22,6 @@
 
 print("\nEnter the verse number")
 verse = int(input())
-verse_number = 0
 gifts = ["A song for the Christmas tree", "Two candy canes", "Three boughs of holly", "Four colored lights", "A shining star", "Little silver bells", "Candles a-glowing", "Gold and silver tinsel", "A guardian angel", "Some mistletoe", "Gifts for one and all", "All their good wishes"]
 
 
@@ -178,3 +177,20 @@ elif verse == 12:
     verse12()
 else:
     ordinal_number = " "
+
+print("\nAnd the entire song is...")
+print("\n  ")
+
+
+verse1()
+verse2()
+verse3()
+verse4()
+verse5()
+verse6()
+verse7()
+verse8()
+verse9()
+verse10()
+verse11()
+verse12()
