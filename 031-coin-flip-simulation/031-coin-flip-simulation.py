@@ -20,13 +20,12 @@ def head_or_tail():
         h_or_t.append(random.randint(0, 1))
         if h_or_t[len(h_or_t) - 1] == 1 and h_or_t[len(h_or_t) - 2] == 1 and h_or_t[len(h_or_t) - 3] == 1:
             break
+    for num in h_or_t:
+        if num == 0:
+            print("H", end= " ")
+        elif num == 1:
+            print("T", end= " ")
 
+    print("(" + str(len(h_or_t)) + " flips)")
 head_or_tail()
 
-for num in h_or_t:
-    if num == 0:
-        print("H", end= " ")
-    elif num == 1:
-        print("T", end= " ")
-
-print("(" + str(len(h_or_t)) + " flips)")
