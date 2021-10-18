@@ -34,3 +34,23 @@
 # # Returns: 7:42 AM (9 days later)
 # Do not import any Python libraries. Assume that the start times are valid times.
 # The minutes in the duration time will be a whole number less than 60, but the hour can be any whole number.
+import math
+
+print("\nEnter a starting hour (Es. 10:25 AM")
+start = input()
+print("\nEnter the time to add (Es. 08:03)")
+add = input()
+
+def add_time(s, a):
+    half_day = ["AM", "PM"]
+    time = []
+    # Total minutes
+    total_hour = (int(s[:2]) * 60 + int(s[3:])) + (int(a[:2]) * 60 + int(a[3:]))
+    new_days = math.floor(total_hour / 24)
+    new_hour = math.floor(total_hour % 24)
+    new_minutes = int(s[3:]) + int(a[3:])
+    if new_minutes >= 60:
+        new_hour = new_hour + 1
+        new_minutes = int(s[3:]) - (60 - int(a[3:]))
+    if new_hour > 12:
+        new_hour = new_hour - 12
