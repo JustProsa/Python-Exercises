@@ -4,12 +4,24 @@
 # Write a function that determines whether or not a date is a magic date.
 # Use your function to create a main program that finds and displays all of the magic dates in the 20th century.
 
-# print("\nEnter the day")
-# day = int(input())
-# print("\nEnter the month")
-# month = int(input())
-# print("\nEnter the year")
-# year = int(input())
+print("\nEnter the day")
+day = int(input())
+print("\nEnter the month")
+month = int(input())
+print("\nEnter the year")
+year = int(input())
 
-# if day * month == 
+def magicDate(d, m, y):
+    string_year = str(y)
+    if d * m == int(string_year[len(string_year) - 2:]):
+        print("\nYES! IT'S A MAGIC DATE!")
+    else:
+        print("\nNO! THAT'S NOT MAGIC!")
+
+magicDate(day, month, year)
+
+
+
+
+
 
