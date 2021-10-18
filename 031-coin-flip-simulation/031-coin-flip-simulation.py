@@ -1,4 +1,4 @@
-# What's the minimum number of times you have to flip a coin before you can have three consecutive flips
+ # What's the minimum number of times you have to flip a coin before you can have three consecutive flips
 # that result in the same outcome (either all three are heads or all three are tails)?
 # What's the maximum number of flips that might be needed? How many flips are needed on average?
 # In this exercise we will explore these questions by creating a program that simulates several series of coin flips.
@@ -185,40 +185,68 @@ import random
 # head_or_tail9()
 # head_or_tail10()
 
+# def insertValue():
+#     h_or_t_el = []
+#     while True:
+#         h_or_t_el.append(random.randint(0, 1))
+#         if len(h_or_t_el) >= 3:
+#             if h_or_t_el[len(h_or_t_el) - 3] == 1 and h_or_t_el[len(h_or_t_el) - 2] == 1 and h_or_t_el[len(h_or_t_el) - 1] == 1 or h_or_t_el[len(h_or_t_el) - 3] == 0 and h_or_t_el[len(h_or_t_el) - 2] == 0 and h_or_t_el[len(h_or_t_el) - 1] == 0:
+#                 for num in h_or_t_el:
+#                     if num == 0:
+#                         num = "H"
+#                     elif num == 1:
+#                         num = "T"
+#                 # print("(" + str(len(h_or_t_el)) + " flips)")
+#                 break    
+#             else:
+#                 h_or_t_el.append(random.randint(0, 1))
+#     return h_or_t_el
+
+
+# def head_or_tail():
+#     h_or_t = []
+#     somme = []
+#     for i in range(10):
+#         h_or_t.insert(i, insertValue())
+
+#     for ogg in h_or_t:
+#         # ogg.append("(" + str(len(ogg)) + " flips)")
+#         somme.append(len(ogg))
+
+#     for el in h_or_t[i]:
+#         if el == 0:
+#             print("H", end = " ")
+#         elif el == 1:
+#             print("T", end= " ")
+#     print("(" + str(len(ogg)) + " flips)")
+
+#     tot_sum = sum(somme)
+#     print("\nThe average of flips is: " + str(tot_sum / len(h_or_t)))
+
 def insertValue():
-    h_or_t_el = []
+    h_or_t1 = []
     while True:
-        h_or_t_el.append(random.randint(0, 1))
-        if len(h_or_t_el) >= 3:
-            if h_or_t_el[len(h_or_t_el) - 1] == 1 and h_or_t_el[len(h_or_t_el) - 2] == 1 and h_or_t_el[len(h_or_t_el) - 3] == 1 or h_or_t_el[len(h_or_t_el) - 1] == 0 and h_or_t_el[len(h_or_t_el) - 2] == 0 and h_or_t_el[len(h_or_t_el) - 3] == 0:
-                for num in h_or_t_el:
-                    if num == 0:
-                        num = "H"
-                    elif num == 1:
-                        num = "T"
-                # print("(" + str(len(h_or_t_el)) + " flips)")
+        h_or_t1.append(random.randint(0, 1))
+        if len(h_or_t1) >= 3:
+            if h_or_t1[len(h_or_t1) - 1] == 1 and h_or_t1[len(h_or_t1) - 2] == 1 and h_or_t1[len(h_or_t1) - 3] == 1 or h_or_t1[len(h_or_t1) - 1] == 0 and h_or_t1[len(h_or_t1) - 2] == 0 and h_or_t1[len(h_or_t1) - 3] == 0:
                 break    
             else:
-                h_or_t_el.append(random.randint(0, 1))
-    return h_or_t_el
+                h_or_t1.append(random.randint(0, 1))
+    return h_or_t1
 
-def head_or_tail():
-    h_or_t = []
-    somme = []
-    for i in range(10):
-        h_or_t.insert(i, insertValue())
+total = []
+sums = []
 
-    for ogg in h_or_t:
-        ogg.append("(" + str(len(ogg) - 1) + " flips)")
-        somme.append(len(ogg) - 1)
+for i in range(10):
+    total.insert(i, insertValue())
 
-    for el in h_or_t[i]:
-        print(el, end= " ")
+for el in total:
+    el.append("(" + str(len(el)) + " flips)")
+    sums.append(len(el))
+    print(el)
 
-    tot_sum = sum(somme)
-    print("\nThe average of flips is: " + str(tot_sum / len(h_or_t)))
+average = sum(sums) / len(sums)
+print("\nThe average of flips is: " + str(average))
 
-head_or_tail()
-    
     
 
