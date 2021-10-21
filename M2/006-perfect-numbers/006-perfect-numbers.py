@@ -22,7 +22,7 @@ def perfectNumber(i):
     else:
         return False
 
-perfectNumber(user_input)
+print(perfectNumber(user_input))
 
 tenThousand = []
 for n in range(1, 10001):
