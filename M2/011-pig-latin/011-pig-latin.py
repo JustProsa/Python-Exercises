@@ -57,5 +57,3 @@ print(pigLatin(user_input))
 #         list(word).append("way")
 #     "".join(list(word))
 #     print(word, end= " ")
-
-
