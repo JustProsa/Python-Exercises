@@ -26,9 +26,9 @@ def pigLatin(strn):
         for e in word:
             if e in consonants:
                 counter = 0
-                while e in consonants:
-                    word.append(e)
-                    word.remove(e)
+                while word[counter] in consonants:
+                    word.append(word[counter])
+                    word.remove(word[counter])
                     counter += 1
                 word.append("ay")
             elif e in vowels:
