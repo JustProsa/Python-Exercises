@@ -24,6 +24,8 @@ def decimal_to_binary(n, s):
     elif int(n) == 1:
         result = s + "1"
         return result[::-1]
+    elif int(n) < 0:
+        raise ValueError("Enter a positive integer for convert it in binary.")
     else:
         result = int(n) // 2
         s += str(int(n) % 2)
